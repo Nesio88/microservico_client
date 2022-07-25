@@ -3,7 +3,7 @@
 ### Instalação
 Clonar Projeto
 ```sh
-git clone https://github.com/Nesio88/laravel_docker.git
+git clone https://github.com/Nesio88/microservico_client.git
 ```
 
 Criar o Arquivo .env
