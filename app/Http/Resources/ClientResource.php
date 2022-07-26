@@ -19,6 +19,7 @@ class ClientResource extends JsonResource
             "name" => ucfirst($this->name),
             "email" => $this->email,
             "slug"  => $this->url,
+            "count_access" => $this->count_access,
             "date_birth" => Carbon::make($this->date_birth)->format('d/m/Y'),
             "date_created" => Carbon::make($this->created_at)->format('d/m/Y'),
         ];

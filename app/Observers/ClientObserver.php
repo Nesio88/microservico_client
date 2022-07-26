@@ -15,7 +15,7 @@ class ClientObserver
      */
     public function creating(Client $client)
     {
-        $client->url = Str::slug($client->name, '-');        
+        $client->url = Str::slug($client->name, '-');  
     }
 
     /**

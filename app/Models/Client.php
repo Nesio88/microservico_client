@@ -13,6 +13,7 @@ class Client extends Model
         'name',
         'email',
         'url',
+        'count_access',
         'date_birth'
     ];
 }
