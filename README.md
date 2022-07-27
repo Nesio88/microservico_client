@@ -23,13 +23,15 @@ DB_DATABASE=micro_client
 DB_USERNAME=root
 DB_PASSWORD=root
 
-CACHE_DRIVER=redis
-QUEUE_CONNECTION=redis
-SESSION_DRIVER=redis
-
-REDIS_HOST=redis
-REDIS_PASSWORD=null
-REDIS_PORT=6379
+MAIL_MAILER=smtp
+MAIL_HOST=mailcatcher_micro_client
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=contato@snsistemas.com.br
+MAIL_FROM_NAME="${APP_NAME}"
+ 
 ```
 
 Subir os containers do projeto
