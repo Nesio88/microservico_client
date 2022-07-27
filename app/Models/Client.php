@@ -14,6 +14,6 @@ class Client extends Model
         'email',
         'url',
         'count_access',
-        'date_birth'
+        'date_birth' 
     ];
 }
