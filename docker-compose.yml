@@ -45,6 +45,16 @@ services:
         networks: 
             - microservices
     
+    # mailcatcher
+    mailcatcher_micro_client:
+        image: schickling/mailcatcher
+        restart: unless-stopped
+        ports:
+            - 1080:1080
+            - 1025:1025
+        networks: 
+            - microservices
+
 networks: 
     microservices:
         driver: bridge

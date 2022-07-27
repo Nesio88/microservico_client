@@ -9,6 +9,7 @@ use App\Http\Resources\ClientResource;
 use App\Http\Requests\StoreUpdateClient;
 use App\Events\ClientNavigationEvent;
 use Carbon\Carbon;
+use App\Notifications\notifyClient;
 
 class ClientController extends Controller
 { 
@@ -40,7 +41,11 @@ class ClientController extends Controller
     {
         $client = $this->repository->create($request->validated());
         
-        return new ClientResource($client);
+        $result = new ClientResource($client);
+
+        $client->notify(new notifyClient($client));
+
+        return $result;
     }
 
     /**
