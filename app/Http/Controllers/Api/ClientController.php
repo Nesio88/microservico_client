@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Client;
 use App\Http\Resources\ClientResource;
 use App\Http\Requests\StoreUpdateClient;
+use App\Events\ClientNavigationEvent;
 
 class ClientController extends Controller
 { 
@@ -50,6 +51,8 @@ class ClientController extends Controller
     public function show($url)
     {
         $client = $this->repository->where('url', $url)->firstOrFail();
+
+        ClientNavigationEvent::dispatch($client);
 
         return new ClientResource($client);
     }
